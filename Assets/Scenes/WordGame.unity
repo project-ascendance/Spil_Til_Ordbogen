@@ -382,6 +382,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebf2d4b4e2491524d84d5a4977ca65b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emptyState:
+    fillColor: {r: 0.76470596, g: 0.9725491, b: 1, a: 1}
+    outlineColor: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 1}
+  correctState:
+    fillColor: {r: 0.2823518, g: 0.745283, b: 0, a: 1}
+    outlineColor: {r: 0.19304873, g: 0.509434, b: 0, a: 1}
+  occupiedState:
+    fillColor: {r: 0.76470596, g: 0.9725491, b: 1, a: 1}
+    outlineColor: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 1}
+  wrongPositionState:
+    fillColor: {r: 0.8490566, g: 0.82046497, b: 0.052064814, a: 1}
+    outlineColor: {r: 0.5471698, g: 0.5258134, b: 0.002580996, a: 1}
+  incorrectState:
+    fillColor: {r: 0.745283, g: 0.024608415, b: 0.024608415, a: 1}
+    outlineColor: {r: 0.509434, g: 0.03123889, b: 0.03123889, a: 1}
 --- !u!1 &476036978
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,7 +534,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.542969, g: 0.63265294, b: 0.7735849, a: 0}
+  m_BackGroundColor: {r: 0.7647059, g: 0.9740966, b: 1, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1432,6 +1447,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5454855115323406600, guid: 2de684ca5c2ea0e46a2907f6b17a896e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5454855115323406600, guid: 2de684ca5c2ea0e46a2907f6b17a896e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9725491
+      objectReference: {fileID: 0}
+    - target: {fileID: 5454855115323406600, guid: 2de684ca5c2ea0e46a2907f6b17a896e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.76470596
+      objectReference: {fileID: 0}
     - target: {fileID: 7018428377034368757, guid: 2de684ca5c2ea0e46a2907f6b17a896e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1448,6 +1475,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8710347217139612706, guid: 2de684ca5c2ea0e46a2907f6b17a896e, type: 3}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 6989389849059749293, guid: 3a001d203b78dd340af6d413eceee8b0, type: 3}
     - target: {fileID: 9133927356177637141, guid: 2de684ca5c2ea0e46a2907f6b17a896e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
