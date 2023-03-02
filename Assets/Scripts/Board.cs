@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Runtime.InteropServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Board : MonoBehaviour
 {
@@ -16,13 +17,12 @@ public class Board : MonoBehaviour
         // Quote corresponds to Æ. Semicolon corresponds to Ø & LeftBacket corresponds to Å
     };
 
-
     [SerializeField]
+    [DisplayName("Word to be guessed")]
     private string wordToBeGuessed { get; set; }  
 
     private string[] solutionWords;
     
-
     private Row[] rows;
     private int rowIndex;
     private int columnIndex;
@@ -91,7 +91,13 @@ public class Board : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.Return))
         {
-            OnSubmitRow(currentRow);
+            if(columnIndex == currentRow.tiles.Count)
+            {
+                OnSubmitRow(currentRow);
+            }
+            else{
+                Debug.Log("You can't submit before the whole row is filled");
+            }
         }
 
         for (int i = 0; i < ALL_KEYS.Length; i++)
@@ -179,8 +185,29 @@ public class Board : MonoBehaviour
         rowIndex++;
         columnIndex = 0;
 
+        // Check if the player reached the last row without guessing the word. Disables the script.
         if(rowIndex >= rows.Length){
             enabled = false;
         }
+
+        // Check if the row submitted is the wordTobeGuessed
+        if(HasWon(submitRow))
+        {
+            enabled = false;
+            Debug.Log("YOU WIN");
+        }
+    }
+
+    private bool HasWon(Row row)
+    {
+        for (int i = 0; i < row.tiles.Count; i++)
+        {
+            if(row.tiles[i].state != correctState)
+            {
+                return false;
+            }   
+        }
+
+        return true;
     }
 }
