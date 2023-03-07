@@ -5,19 +5,17 @@ using UnityEngine.UI;
 
 public class Row : MonoBehaviour
 {
-    private float spacingScale = 0.05f;
     private float tileScale = 0.8f;
 
     private HorizontalLayoutGroup transformLayoutGroup;
     private Vector3 localSpawnScale = new Vector3(1,1,1);
     public GameObject tile;
-    public List<Tile> tiles { get; set; }
+    public List<Tile> tiles { get; set; } = new List<Tile>();
 
     // Start is called before the first frame update
     void Start()
     {
         transformLayoutGroup = GetComponent<HorizontalLayoutGroup>();
-        tiles = new List<Tile>();
     }
 
     public void SetTilesAmount(string word)

@@ -1,0 +1,27 @@
+{
+	"Words":[
+		{
+			"PrimaryWord": "Magt",
+			"Synonyms":[
+				{
+					"Name": "Herredømme"
+				},
+				{
+					"Name": "Bestemmelse"
+				}
+			]
+		},
+		{
+			"PrimaryWord": "Luksuriøs",
+			"Synonyms":[
+				{
+					"Name": "Flot"
+				},
+				{
+					"Name": "Overdådig"
+				}
+			]
+
+		}
+	]
+}
