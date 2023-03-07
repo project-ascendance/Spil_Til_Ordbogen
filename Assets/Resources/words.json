@@ -22,6 +22,44 @@
 				}
 			]
 
+		},
+		{
+			"PrimaryWord": "Stor",
+			"Synonyms":[
+				{
+					"Name": "Kolosal"
+				},
+				{
+					"Name": "Kæmpe"
+				},
+				{
+					"Name": "Mega"
+				},
+				{
+					"Name": "Enorm"
+				}
+			]
+		},
+		{
+			"PrimaryWord": "Lille",
+			"Synonyms":[
+				{
+					"Name": "Petit"
+				}
+			]
+
+		},
+		{
+			"PrimaryWord": "Sur",
+			"Synonyms":[
+				{
+					"Name": "Gnaven"
+				},
+				{
+					"Name": "Muggen"
+				}
+			]
+
 		}
 	]
 }

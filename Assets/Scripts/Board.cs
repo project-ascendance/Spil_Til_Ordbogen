@@ -124,7 +124,7 @@ public class Board : MonoBehaviour
         synonymList = new List<string>();
 
         int wordIndex = 0;
-
+        
         for (int i = 0; i < synonymResponse.Words.Count; i++)
         {
             tempWordList.Add(synonymResponse.Words[i].PrimaryWord.ToLower().Trim());
