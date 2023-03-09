@@ -1,29 +1,6 @@
 {
 	"Words":[
 		{
-			"PrimaryWord": "Magt",
-			"Synonyms":[
-				{
-					"Name": "Herredømme"
-				},
-				{
-					"Name": "Bestemmelse"
-				}
-			]
-		},
-		{
-			"PrimaryWord": "Luksuriøs",
-			"Synonyms":[
-				{
-					"Name": "Flot"
-				},
-				{
-					"Name": "Overdådig"
-				}
-			]
-
-		},
-		{
 			"PrimaryWord": "Stor",
 			"Synonyms":[
 				{
@@ -44,7 +21,10 @@
 			"PrimaryWord": "Lille",
 			"Synonyms":[
 				{
-					"Name": "Petit"
+					"Name": "Små"
+				},
+				{
+					"Name": "Mini"
 				}
 			]
 
@@ -57,6 +37,12 @@
 				},
 				{
 					"Name": "Muggen"
+				},
+				{
+					"Name": "Irritabel"
+				},
+				{
+					"Name": "Irriteret"
 				}
 			]
 
