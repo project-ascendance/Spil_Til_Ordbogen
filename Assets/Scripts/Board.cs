@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +17,10 @@ public class Board : MonoBehaviour
 
         // Quote corresponds to Æ. Semicolon corresponds to Ø & LeftBacket corresponds to Å
     };
+
+    // Managing contact to the GuessedWordList script.
+    GuessedWordList guessedWordList;
+    [SerializeField]GameObject guessedWordListGameObject;
 
     // JSON file gets added in UI.
     public TextAsset textJSON;
@@ -37,8 +42,9 @@ public class Board : MonoBehaviour
     private int rowAmountMediumWord;
     [SerializeField]
     private int rowAmountShortWord;
+    public List<string> correctWords = new List<string>();
 
-
+    //public GuessedWordList guessedWordLists;
     public List<Row> rows { get; set; } = new List<Row>();
     public GameObject rowPrefab;
 
@@ -59,7 +65,7 @@ public class Board : MonoBehaviour
 
     private void Awake() 
     {
-
+        guessedWordList = guessedWordListGameObject.GetComponent<GuessedWordList>();
     }
 
     void Start()
@@ -76,14 +82,10 @@ public class Board : MonoBehaviour
 
     public void NextWord()
     {
-        if(synonymList.Contains(wordToBeGuessed))
-        {
-            synonymList.Remove(wordToBeGuessed.ToLower().Trim());
-        }
+        tryAgainButton.interactable = true;
 
         if(synonymList.Count > 0)
         {
-
         string tempWord = synonymList[Random.Range(0, synonymList.Count)];
 
         while(wordToBeGuessed == tempWord)
@@ -94,7 +96,7 @@ public class Board : MonoBehaviour
 
         wordToBeGuessed = tempWord.ToLower().Trim();
 
-        ClearBoardNewGame();
+        ClearBoardNextWord();
         enabled = true;
         }
         else{
@@ -104,6 +106,9 @@ public class Board : MonoBehaviour
 
     public void NewGame()
     {
+        nextWordButton.interactable = true;
+        tryAgainButton.interactable = true;
+
         SetRandomWord();
         ClearBoardNewGame();
         enabled = true;
@@ -229,9 +234,50 @@ public class Board : MonoBehaviour
 
         rowIndex = 0;
         columnIndex = 0;
+
+
+        // Makes sure to delete the correct guessed word from the
+        // guessed words list, if they player did in fact guess the word,
+        // but wants to try again on the same word for some reason.
+        
+        /*if(guessedWordList.correctWords.Count != 0)
+        {
+            int lastCorrectWordIndex = guessedWordList.correctWords.Count;
+
+            CorrectWord tempCorrectWord = guessedWordList.correctWords[lastCorrectWordIndex-1];
+
+            if(guessedWordList.correctWords.Contains(tempCorrectWord))
+            {
+                //guessedWordList.correctWords.Remove(tempCorrectWord);
+                Destroy(tempCorrectWord.gameObject);
+            }
+        }*/
     }
 
-    private void ClearBoardNewGame()
+    private void ClearBoardNextWord()
+    {
+        foreach (Row row in rows)
+        {
+            foreach (Tile tile in row.tiles)
+            {
+                Destroy(tile.gameObject);
+            }
+
+            row.tiles.Clear();
+
+            Destroy(row.gameObject);
+        }
+
+        rows.Clear();
+
+        rowIndex = 0;
+        columnIndex = 0;
+
+        SetRowAmount();
+        SetTileAmount();
+    }
+
+    public void ClearBoardNewGame()
     {
         foreach (Row row in rows)
         {
@@ -253,6 +299,12 @@ public class Board : MonoBehaviour
         SetRowAmount();
         SetTileAmount();
 
+        foreach (CorrectWord item in guessedWordList.correctWords)
+        {
+            Destroy(item.gameObject);
+        }
+
+        guessedWordList.correctWords.Clear();
     }
 
     private char ConvertToDanish(KeyCode keyCode)
@@ -330,9 +382,37 @@ public class Board : MonoBehaviour
         // Check if the row submitted is the wordTobeGuessed
         if(HasWon(submitRow))
         {
+
+            if(synonymList.Contains(wordToBeGuessed))
+            {
+                synonymList.Remove(wordToBeGuessed.ToLower().Trim());
+            }
+
+            if(LastSynonym())
+            {
+                nextWordButton.interactable = false;
+            }
+
+            tryAgainButton.interactable = false;
+            SetGuessedWord(wordToBeGuessed);
             enabled = false;
-            Debug.Log("YOU WIN");
+             Debug.Log("YOU WIN");
         }
+    }
+
+    public void SetGuessedWord(string correctWord)
+    {
+        guessedWordList.SpawnCorrectWord(correctWord);
+    }
+
+    public bool LastSynonym()
+    {
+        if(synonymList.Count == 0)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     private bool HasWon(Row row)
