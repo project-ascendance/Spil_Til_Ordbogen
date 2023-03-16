@@ -1,0 +1,1504 @@
+{
+    "words":[
+    {
+        "word": "almindelig",
+        "synonyms": [
+            "almen",
+            "almengyldig",
+            "altomfattende",
+            "altomspændende",
+            "bekendt",
+            "fælles",
+            "gangbar",
+            "generel",
+            "global",
+            "universal"
+        ]
+    },
+    {
+        "word": "alvorlig",
+        "synonyms": [
+            "alvorsfuld",
+            "anstandsfuld",
+            "betynget",
+            "dyster",
+            "dødsensalvorlig",
+            "glædesløs",
+            "gravalvorlig",
+            "humorforladt",
+            "humørforladt",
+            "melankolsk"
+        ]
+    },
+    {
+        "word": "begavelse",
+        "synonyms": [
+            "abstraktionsevne",
+            "begavelse",
+            "fatteevne",
+            "fornuft",
+            "forstand",
+            "forstandighed",
+            "hjerne",
+            "hoved",
+            "intellekt",
+            "intelligens"
+        ]
+    },
+    {
+        "word": "billede",
+        "synonyms": [
+            "afbildning",
+            "afpræg",
+            "afspejling",
+            "fremstilling",
+            "genspejling",
+            "kopi",
+            "skildring",
+            "spejling",
+            "afbillede",
+            "akvarel"
+        ]
+    },
+    {
+        "word": "blid",
+        "synonyms": [
+            "barmhjertig",
+            "bevågen",
+            "blød",
+            "blødsøden",
+            "douce",
+            "dæmpet",
+            "eftergivende",
+            "fordragelig",
+            "forsigtig",
+            "forsonlig"
+        ]
+    },
+    {
+        "word": "brød",
+        "synonyms": [
+            "baguette",
+            "bolle",
+            "croissant",
+            "giffel",
+            "flute",
+            "formbrød",
+            "franskbrød",
+            "grovbrød",
+            "knækbrød",
+            "landbrød"
+        ]
+    },
+    {
+        "word": "dosmer",
+        "synonyms": [
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "får",
+            "fæ",
+            "fæhoved",
+            "grødhoved"
+        ]
+    },
+    {
+        "word": "dumrian",
+        "synonyms": [
+            "dosmer",
+            "dompap",
+            "dummepeter",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "får",
+            "fæ",
+            "fæhoved"
+        ]
+    },
+    {
+        "word": "dåre",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved",
+            "høved"
+        ]
+    },
+    {
+        "word": "enorm",
+        "synonyms": [
+            "astronomisk",
+            "drabelig",
+            "forfærdelig",
+            "gevaldig",
+            "gigantisk",
+            "knusende",
+            "kolossal",
+            "kæmpemæssig",
+            "kæmpestor",
+            "mægtig"
+        ]
+    },
+    {
+        "word": "fantastisk",
+        "synonyms": [
+            "alle tiders",
+            "drømmeagtig",
+            "enestående",
+            "eventyragtig",
+            "eventyrlig",
+            "fabelagtig",
+            "formidabel",
+            "fortrinlig",
+            "fremragende",
+            "fyrstelig"
+        ]
+    },
+    {
+        "word": "farlig",
+        "synonyms": [
+            "betænkelig",
+            "dumdristig",
+            "dødsensfarlig",
+            "farefuld",
+            "faretruende",
+            "graverende",
+            "halsbrækkende",
+            "halsløs",
+            "risikabel",
+            "risikofyldt"
+        ]
+    },
+    {
+        "word": "fast",
+        "synonyms": [
+            "blivende",
+            "fasttømret",
+            "invariabel",
+            "klippefast",
+            "konsekvent",
+            "konstant",
+            "obligat",
+            "permanent",
+            "rigid",
+            "solid"
+        ]
+    },
+    {
+        "word": "fin",
+        "synonyms": [
+            "civiliseret",
+            "distingveret",
+            "fornem",
+            "kultiveret",
+            "mondæn",
+            "nobel",
+            "chik",
+            "delikat",
+            "eksklusiv",
+            "elegant"
+        ]
+    },
+    {
+        "word": "fjog",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved",
+            "idiot"
+        ]
+    },
+    {
+        "word": "fjols",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved",
+            "idiot"
+        ]
+    },
+    {
+        "word": "fjumrehoved",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjols",
+            "fjog",
+            "fæ",
+            "fæhoved",
+            "grødhoved",
+            "idiot"
+        ]
+    },
+    {
+        "word": "flad",
+        "synonyms": [
+            "glat",
+            "jævn",
+            "plan",
+            "plat",
+            "egal",
+            "glat",
+            "horisontal",
+            "lige",
+            "vandret",
+            "nedtrykt"
+        ]
+    },
+    {
+        "word": "flok",
+        "synonyms": [
+            "antal",
+            "bunke",
+            "hob",
+            "hoben",
+            "hobetal",
+            "masse",
+            "mængde",
+            "utal",
+            "folkemasse",
+            "folkemængde"
+        ]
+    },
+    {
+        "word": "flot",
+        "synonyms": [
+            "blændende",
+            "brillant",
+            "elegant",
+            "eminent",
+            "fejende",
+            "fortræffelig",
+            "fremragende",
+            "glansfuld",
+            "glimrende",
+            "gloriøs"
+        ]
+    },
+    {
+        "word": "forbindelse",
+        "synonyms": [
+            "bindeled",
+            "bro",
+            "forbindelsesled",
+            "kobling",
+            "mellemled",
+            "forening",
+            "forhold",
+            "formæling",
+            "giftermål",
+            "liaison"
+        ]
+    },
+    {
+        "word": "fornem",
+        "synonyms": [
+            "adelig",
+            "aristokratisk",
+            "distingveret",
+            "fin",
+            "nobel",
+            "ophøjet",
+            "overlegen",
+            "statelig",
+            "værdig",
+            "anset"
+        ]
+    },
+    {
+        "word": "forvirret",
+        "synonyms": [
+            "befippet",
+            "befippet",
+            "bims",
+            "desorienteret",
+            "forfjamsket",
+            "forfjumret",
+            "forlegen",
+            "forstyrret",
+            "fortumlet",
+            "forvildet"
+        ]
+    },
+    {
+        "word": "frygtelig",
+        "synonyms": [
+            "afskrækkende",
+            "afskyelig",
+            "bloddryppende",
+            "blodig",
+            "forbandet",
+            "forfærdelig",
+            "forfærdende",
+            "forskrækkelig",
+            "frygtindgydende",
+            "fæl"
+        ]
+    },
+    {
+        "word": "fræk",
+        "synonyms": [
+            "beskidt",
+            "formastelig",
+            "skamløs",
+            "skammelig",
+            "uartig",
+            "uforskammet",
+            "upassende",
+            "æreløs",
+            "dristig",
+            "eventyrlysten"
+        ]
+    },
+    {
+        "word": "fyldig",
+        "synonyms": [
+            "harmonisk",
+            "klangfuld",
+            "velklingende",
+            "vellydende",
+            "bastant",
+            "bollet",
+            "buttet",
+            "diger",
+            "fed",
+            "kompakt"
+        ]
+    },
+    {
+        "word": "fæ",
+        "synonyms": [
+            "bæst",
+            "drog",
+            "dyr",
+            "stud",
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols"
+        ]
+    },
+    {
+        "word": "fæhoved",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "grødhoved",
+            "idiot"
+        ]
+    },
+    {
+        "word": "gal",
+        "synonyms": [
+            "afsindig",
+            "besat",
+            "bindegal",
+            "forrykt",
+            "forrykt",
+            "forstyrret",
+            "kulret",
+            "sindssyg",
+            "skrupskør",
+            "skør"
+        ]
+    },
+    {
+        "word": "gammel",
+        "synonyms": [
+            "affældig",
+            "aldrende",
+            "grånet",
+            "mosgroet",
+            "oldingeagtig",
+            "senil",
+            "svækket",
+            "udlevet",
+            "udslidt",
+            "ældet"
+        ]
+    },
+    {
+        "word": "glad",
+        "synonyms": [
+            "ellevild",
+            "fornøjet",
+            "frejdig",
+            "fro",
+            "glædestrålende",
+            "henrykt",
+            "himmelhenrykt",
+            "humørfyldt",
+            "kisteglad",
+            "kåd"
+        ]
+    },
+    {
+        "word": "gnaven",
+        "synonyms": [
+            "arrig",
+            "bister",
+            "brøsig",
+            "bøs",
+            "edderspændt",
+            "forbitret",
+            "fortørnet",
+            "fortrædelig",
+            "gal",
+            "galhovedet"
+        ]
+    },
+    {
+        "word": "god",
+        "synonyms": [
+            "dreven",
+            "duelig",
+            "dygtig",
+            "egnet",
+            "erfaren",
+            "garvet",
+            "habil",
+            "kompetent",
+            "kvalificeret",
+            "kyndig"
+        ]
+    },
+    {
+        "word": "gruppe",
+        "synonyms": [
+            "afstamning",
+            "art",
+            "genre",
+            "gren",
+            "kategori",
+            "klasse",
+            "slags",
+            "sort",
+            "type",
+            "bande"
+        ]
+    },
+    {
+        "word": "grusom",
+        "synonyms": [
+            "afskrækkende",
+            "afskyelig",
+            "barbarisk",
+            "barsk",
+            "bestialsk",
+            "bloddryppende",
+            "blodig",
+            "blodtørstig",
+            "brutal",
+            "diabolsk"
+        ]
+    },
+    {
+        "word": "grødhoved",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "får",
+            "fæ",
+            "fæhoved"
+        ]
+    },
+    {
+        "word": "herlig",
+        "synonyms": [
+            "alle tiders",
+            "bedårende",
+            "blændende",
+            "brillant",
+            "dejlig",
+            "eminent",
+            "enestående",
+            "excellent",
+            "fantastisk",
+            "fin"
+        ]
+    },
+    {
+        "word": "hurtig",
+        "synonyms": [
+            "akut",
+            "ekspedit",
+            "ferm",
+            "flygtig",
+            "gesvindt",
+            "hastig",
+            "heftig",
+            "hurtiggående",
+            "lynhurtig",
+            "omgående"
+        ]
+    },
+    {
+        "word": "hus",
+        "synonyms": [
+            "barak",
+            "blok",
+            "bungalow",
+            "bygning",
+            "domicil",
+            "ejendom",
+            "husblok",
+            "hytte",
+            "højhus",
+            "karré"
+        ]
+    },
+    {
+        "word": "høved",
+        "synonyms": [
+            "hornkvæg",
+            "okse",
+            "stud",
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved"
+        ]
+    },
+    {
+        "word": "hård",
+        "synonyms": [
+            "fast",
+            "barket",
+            "grov",
+            "ru",
+            "heftig",
+            "kraftig",
+            "streng",
+            "strid",
+            "stærk",
+            "anstrengende"
+        ]
+    },
+    {
+        "word": "idé",
+        "synonyms": [
+            "grille",
+            "indfald",
+            "indskydelse",
+            "påfund",
+            "tanke",
+            "påhit",
+            "anelse",
+            "begreb",
+            "forestilling",
+            "formening"
+        ]
+    },
+    {
+        "word": "idiot",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved"
+        ]
+    },
+    {
+        "word": "jage",
+        "synonyms": [
+            "efterspore",
+            "forfølge",
+            "jagte",
+            "opspore",
+            "opstøve",
+            "spore",
+            "drive",
+            "genne",
+            "nøde",
+            "tvinge"
+        ]
+    },
+    {
+        "word": "kedelig",
+        "synonyms": [
+            "almindelig",
+            "banal",
+            "begivenhedsfattig",
+            "begivenhedsløs",
+            "dagligdags",
+            "drævende",
+            "dødkedelig",
+            "dødssyg",
+            "ensformig",
+            "fantasiforladt"
+        ]
+    },
+    {
+        "word": "klaptorsk",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved"
+        ]
+    },
+    {
+        "word": "klar",
+        "synonyms": [
+            "blank",
+            "gennemsigtig",
+            "glansfuld",
+            "glasklar",
+            "glinsende",
+            "krystalklar",
+            "ren",
+            "sigtbar",
+            "transparent",
+            "farbar"
+        ]
+    },
+    {
+        "word": "klodrian",
+        "synonyms": [
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved",
+            "høved"
+        ]
+    },
+    {
+        "word": "klods",
+        "synonyms": [
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved",
+            "høved"
+        ]
+    },
+    {
+        "word": "klodshans",
+        "synonyms": [
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved",
+            "høved"
+        ]
+    },
+    {
+        "word": "klodsmajor",
+        "synonyms": [
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved",
+            "høved"
+        ]
+    },
+    {
+        "word": "klokkefår",
+        "synonyms": [
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved",
+            "høved"
+        ]
+    },
+    {
+        "word": "klokker",
+        "synonyms": [
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved",
+            "høved"
+        ]
+    },
+    {
+        "word": "klovn",
+        "synonyms": [
+            "abekat",
+            "bajads",
+            "cirkusklovn",
+            "gøgler",
+            "hofnar",
+            "komiker",
+            "nar",
+            "dummepeter",
+            "dumrian",
+            "dåre"
+        ]
+    },
+    {
+        "word": "kluddermikkel",
+        "synonyms": [
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved",
+            "høved"
+        ]
+    },
+    {
+        "word": "klummerhoved",
+        "synonyms": [
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved",
+            "høved"
+        ]
+    },
+    {
+        "word": "kluntemikkel",
+        "synonyms": [
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved",
+            "høved"
+        ]
+    },
+    {
+        "word": "ko",
+        "synonyms": [
+            "elgko",
+            "kælveko",
+            "malkeko",
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved"
+        ]
+    },
+    {
+        "word": "kold",
+        "synonyms": [
+            "gennemkold",
+            "iskold",
+            "isnende",
+            "råkold",
+            "forfrossen",
+            "stivfrossen",
+            "tænderklaprende",
+            "kølig",
+            "sval",
+            "affejende"
+        ]
+    },
+    {
+        "word": "kraftidiot",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved"
+        ]
+    },
+    {
+        "word": "kraftig",
+        "synonyms": [
+            "håndfast",
+            "hårdhændet",
+            "kraftfuld",
+            "solid",
+            "stærk",
+            "voldsom",
+            "indtrængende",
+            "intens",
+            "stærk",
+            "drøj"
+        ]
+    },
+    {
+        "word": "kvabtorsk",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved"
+        ]
+    },
+    {
+        "word": "kvaj",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved"
+        ]
+    },
+    {
+        "word": "kvajhoved",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved"
+        ]
+    },
+    {
+        "word": "kvajpande",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved"
+        ]
+    },
+    {
+        "word": "kvik",
+        "synonyms": [
+            "begavet",
+            "dygtig",
+            "evnerig",
+            "genial",
+            "højtbegavet",
+            "intelligent",
+            "klarhjernet",
+            "klarttænkende",
+            "klog",
+            "kløgtig"
+        ]
+    },
+    {
+        "word": "lave",
+        "synonyms": [
+            "affatte",
+            "arrangere",
+            "begå",
+            "danne",
+            "fabrikere",
+            "fikse",
+            "forarbejde",
+            "foretage",
+            "forfatte",
+            "forfærdige"
+        ]
+    },
+    {
+        "word": "ligetil",
+        "synonyms": [
+            "almenfattelig",
+            "almenforståelig",
+            "almentilgængelig",
+            "begribelig",
+            "fattelig",
+            "folkelig",
+            "forståelig",
+            "gennemskuelig",
+            "letfattelig",
+            "letfordøjelig"
+        ]
+    },
+    {
+        "word": "liv",
+        "synonyms": [
+            "levned",
+            "levnedsløb",
+            "livsbane",
+            "livsforløb",
+            "livsløb",
+            "vita",
+            "levealder",
+            "levetid",
+            "livstid",
+            "menneskealder"
+        ]
+    },
+    {
+        "word": "mening",
+        "synonyms": [
+            "anskuelse",
+            "betragtning",
+            "erkendelse",
+            "formening",
+            "idé",
+            "indstilling",
+            "livsanskuelse",
+            "livsfilosofi",
+            "livsholdning",
+            "livssyn"
+        ]
+    },
+    {
+        "word": "mild",
+        "synonyms": [
+            "behagelig",
+            "behersket",
+            "blid",
+            "blødhjertet",
+            "dæmpet",
+            "elskværdig",
+            "flink",
+            "fordragelig",
+            "forekommende",
+            "forsonlig"
+        ]
+    },
+    {
+        "word": "muggen",
+        "synonyms": [
+            "fordærvet",
+            "hengemt",
+            "jordslået",
+            "overgemt",
+            "rådden",
+            "skimlet",
+            "fortrædelig",
+            "gnaven",
+            "irritabel",
+            "irriteret"
+        ]
+    },
+    {
+        "word": "munter",
+        "synonyms": [
+            "fornøjet",
+            "frisk",
+            "friskfyragtig",
+            "fro",
+            "gemytlig",
+            "glad",
+            "glædestrålende",
+            "gæv",
+            "humørfyldt",
+            "jovial"
+        ]
+    },
+    {
+        "word": "mål",
+        "synonyms": [
+            "adresse",
+            "bestemmelsessted",
+            "destination",
+            "endemål",
+            "endestation",
+            "havn",
+            "rejsemål",
+            "endemål",
+            "agt",
+            "forsæt"
+        ]
+    },
+    {
+        "word": "nederdrægtig",
+        "synonyms": [
+            "arg",
+            "beskidt",
+            "djævelsk",
+            "foragtelig",
+            "forbandet",
+            "forbasket",
+            "forbistret",
+            "fordømmelig",
+            "fordømt",
+            "forsmædelig"
+        ]
+    },
+    {
+        "word": "odder",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved"
+        ]
+    },
+    {
+        "word": "omgang",
+        "synonyms": [
+            "omdrejning",
+            "runde",
+            "skift",
+            "turnus",
+            "forbindelse",
+            "forhold",
+            "samkvem",
+            "samvær",
+            "ombæring",
+            "behandling"
+        ]
+    },
+    {
+        "word": "område",
+        "synonyms": [
+            "areal",
+            "bælte",
+            "distrikt",
+            "domæne",
+            "egn",
+            "himmelstrøg",
+            "kant",
+            "landområde",
+            "overdrev",
+            "region"
+        ]
+    },
+    {
+        "word": "papand",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved",
+            "idiot"
+        ]
+    },
+    {
+        "word": "rå",
+        "synonyms": [
+            "ubearbejdet",
+            "uforarbejdet",
+            "utilberedt",
+            "afstumpet",
+            "barbarisk",
+            "bestialsk",
+            "brutal",
+            "dyrisk",
+            "følelseskold",
+            "følelsesløs"
+        ]
+    },
+    {
+        "word": "selskab",
+        "synonyms": [
+            "cocktailparty",
+            "fest",
+            "festivitas",
+            "festlighed",
+            "festmåltid",
+            "festbanket",
+            "gilde",
+            "gæstebud",
+            "kalas",
+            "komsammen"
+        ]
+    },
+    {
+        "word": "sinke",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "får",
+            "fæ",
+            "fæhoved"
+        ]
+    },
+    {
+        "word": "skabe",
+        "synonyms": [
+            "arrangere",
+            "danne",
+            "forarbejde",
+            "forfærdige",
+            "forme",
+            "frembringe",
+            "fostre",
+            "generere",
+            "grundlægge",
+            "iværksætte"
+        ]
+    },
+    {
+        "word": "skam",
+        "synonyms": [
+            "anger",
+            "flovhed",
+            "ruelse",
+            "samvittighedsnag",
+            "beskæmmelse",
+            "fornedrelse",
+            "forsmædelse",
+            "nedværdigelse",
+            "skændsel",
+            "tort"
+        ]
+    },
+    {
+        "word": "skvadderhoved",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved"
+        ]
+    },
+    {
+        "word": "slå",
+        "synonyms": [
+            "banke",
+            "gennembanke",
+            "gennemprygle",
+            "kanøfle",
+            "lædere",
+            "piske",
+            "prygle",
+            "smække",
+            "tæske",
+            "tæve"
+        ]
+    },
+    {
+        "word": "stoppe",
+        "synonyms": [
+            "helme",
+            "holde",
+            "indstille",
+            "ophøre",
+            "standse",
+            "afbryde",
+            "bremse",
+            "ende",
+            "hindre",
+            "holde"
+        ]
+    },
+    {
+        "word": "streng",
+        "synonyms": [
+            "barsk",
+            "benhård",
+            "bestemt",
+            "besværlig",
+            "brysk",
+            "brøsig",
+            "drakonisk",
+            "fordringsfuld",
+            "hård",
+            "kritisk"
+        ]
+    },
+    {
+        "word": "stud",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "får",
+            "fæ",
+            "fæhoved"
+        ]
+    },
+    {
+        "word": "torsk",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved"
+        ]
+    },
+    {
+        "word": "torskehoved",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved"
+        ]
+    },
+    {
+        "word": "torskepande",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved"
+        ]
+    },
+    {
+        "word": "tosse",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved"
+        ]
+    },
+    {
+        "word": "tossehoved",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved"
+        ]
+    },
+    {
+        "word": "tumpe",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved"
+        ]
+    },
+    {
+        "word": "tåbe",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved"
+        ]
+    },
+    {
+        "word": "umulius",
+        "synonyms": [
+            "dosmer",
+            "dummepeter",
+            "dumrian",
+            "dåre",
+            "fjog",
+            "fjols",
+            "fjumrehoved",
+            "fæ",
+            "fæhoved",
+            "grødhoved"
+        ]
+    },
+    {
+        "word": "vej",
+        "synonyms": [
+            "allé",
+            "autostrada",
+            "avenue",
+            "bivej",
+            "blindgade",
+            "boulevard",
+            "chaussé",
+            "esplanade",
+            "færdselsåre",
+            "gade"
+        ]
+    },
+    {
+        "word": "ægte",
+        "synonyms": [
+            "fuldblods",
+            "gedigen",
+            "genuin",
+            "lødig",
+            "pur",
+            "ren",
+            "rendyrket",
+            "renlivet",
+            "rigtig",
+            "sand"
+        ]
+    },
+    {
+        "word": "ånd",
+        "synonyms": [
+            "begavelse",
+            "esprit",
+            "vid",
+            "viden",
+            "åndfuldhed",
+            "åndrighed",
+            "ener",
+            "geni",
+            "lys",
+            "naturtalent"
+        ]
+    }
+]
+}
