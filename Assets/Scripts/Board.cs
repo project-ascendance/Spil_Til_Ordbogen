@@ -18,6 +18,11 @@ public class Board : MonoBehaviour
         // Quote corresponds to Æ. Semicolon corresponds to Ø & LeftBacket corresponds to Å
     };
 
+    [SerializeField]
+    private TextMeshProUGUI primaryWordUI;
+
+    [SerializeField]
+    GameObject primaryWordGameObject;
     // Managing contact to the GuessedWordList script.
     GuessedWordList guessedWordList;
     [SerializeField]GameObject guessedWordListGameObject;
@@ -28,6 +33,7 @@ public class Board : MonoBehaviour
     [SerializeField]
     [DisplayName("Word to be guessed")]
     private string wordToBeGuessed { get; set; }  
+    private string primaryWord;
 
     private string[] solutionWords;
 
@@ -66,6 +72,7 @@ public class Board : MonoBehaviour
     private void Awake() 
     {
         guessedWordList = guessedWordListGameObject.GetComponent<GuessedWordList>();
+        primaryWordUI = primaryWordGameObject.GetComponent<TextMeshProUGUI>();
     }
 
     void Start()
@@ -117,6 +124,7 @@ public class Board : MonoBehaviour
     private void LoadData()
     {
         synonymResponse = JsonUtility.FromJson<SynonymResponse.Root>(textJSON.text);
+        Debug.Log(synonymResponse.words);
 
         // OLD CODE
         //TextAsset textFile = Resources.Load("solution_words.txt") as TextAsset;
@@ -128,35 +136,27 @@ public class Board : MonoBehaviour
         List<string> tempWordList = new List<string>();
         synonymList = new List<string>();
 
-        int wordIndex = 0;
+        primaryWord = synonymResponse.words[0].word;
+        primaryWordUI.text = primaryWord;
         
-        for (int i = 0; i < synonymResponse.Words.Count; i++)
+        for (int i = 0; i < synonymResponse.words.Count; i++)
         {
-            tempWordList.Add(synonymResponse.Words[i].PrimaryWord.ToLower().Trim());
+            synonymList.Add(synonymResponse.words[i].synonyms[i].ToLower().Trim());
         }
+        
 
-        string tempWord = tempWordList[Random.Range(0, tempWordList.Count)];
+        string tempWord = synonymList[Random.Range(0, synonymList.Count)];
 
         if(wordToBeGuessed != string.Empty)
         {
             while(wordToBeGuessed == tempWord)
             {
-                tempWord = tempWordList[Random.Range(0, tempWordList.Count)];
+                tempWord = synonymList[Random.Range(0, synonymList.Count)];
                 tempWord = tempWord.ToLower().Trim();
             }
         }
 
         wordToBeGuessed = tempWord.ToLower().Trim();
-
-        // Finds the given index of the solution word
-        wordIndex = tempWordList.IndexOf(wordToBeGuessed);
-        Debug.Log(wordIndex);
-
-        //Populates the list of synonyms for the given solution word and its index
-        for (int i = 0; i < synonymResponse.Words[wordIndex].Synonyms.Count; i++)
-        {
-            synonymList.Add(synonymResponse.Words[wordIndex].Synonyms[i].Name.ToLower().Trim());
-        }
     }
 
     private void SetTileAmount()

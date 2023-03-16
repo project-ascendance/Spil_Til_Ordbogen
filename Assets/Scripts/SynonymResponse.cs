@@ -1,25 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SynonymResponse
 {
-    [System.Serializable]
+    [Serializable]
     public class Root
     {
-        public List<Word> Words;
+        public List<Word> words { get; set; }
     }
 
-    [System.Serializable]
-    public class Synonym
-    {
-        public string Name;
-    }
-
-    [System.Serializable]
+    [Serializable]
     public class Word
     {
-        public string PrimaryWord;
-        public List<Synonym> Synonyms;
+        public string word { get; set; }
+        public List<string> synonyms { get; set; }
     }
 }
