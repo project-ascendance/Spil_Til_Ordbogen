@@ -12,10 +12,14 @@ public class Row : MonoBehaviour
     public GameObject tile;
     public List<Tile> tiles { get; set; } = new List<Tile>();
 
+    void Awake()
+    {
+        transformLayoutGroup = GetComponent<HorizontalLayoutGroup>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        transformLayoutGroup = GetComponent<HorizontalLayoutGroup>();
     }
 
     public void SetTilesAmount(string word)
@@ -27,15 +31,23 @@ public class Row : MonoBehaviour
             Tile tile = Instantiate(this.tile, new Vector3(0,0,0), Quaternion.identity).GetComponent<Tile>();
             tile.transform.SetParent(this.transform, false);
 
-            if(word.Length > 6)
+            if(word.Length > 10 && word.Length <= 14)
             {
                 tile.transform.localScale = new Vector3(tileScale,tileScale,tileScale);
+            }
+            else if(word.Length > 14)
+            {
+                tile.transform.localScale = new Vector3(0.6f,0.6f,0.6f);
             }
             else{
                 tile.transform.localScale = new Vector3(1f,1f,1f);
             }
 
             tiles.Add(tile);
+        }
+
+        if(word.Length > 10){
+            transformLayoutGroup.spacing = 8f;
         }
     }
 }

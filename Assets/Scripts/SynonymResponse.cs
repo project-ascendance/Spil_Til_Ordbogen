@@ -8,13 +8,13 @@ public class SynonymResponse
     [Serializable]
     public class Root
     {
-        public List<Word> words { get; set; }
+        public List<Word> words;
     }
 
     [Serializable]
     public class Word
     {
-        public string word { get; set; }
-        public List<string> synonyms { get; set; }
+        public string word;
+        public List<string> synonyms;
     }
 }

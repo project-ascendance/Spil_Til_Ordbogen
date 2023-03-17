@@ -37,7 +37,7 @@ public class Board : MonoBehaviour
 
     private string[] solutionWords;
 
-    public SynonymResponse.Root synonymResponse = new SynonymResponse.Root();
+    public SynonymResponse.Root synonymResponse;
 
     [SerializeField]
     public List<string> synonymList;
@@ -95,12 +95,6 @@ public class Board : MonoBehaviour
         {
         string tempWord = synonymList[Random.Range(0, synonymList.Count)];
 
-        while(wordToBeGuessed == tempWord)
-        {
-            tempWord = synonymList[Random.Range(0, synonymList.Count)];
-            tempWord = tempWord.ToLower().Trim();
-        }
-
         wordToBeGuessed = tempWord.ToLower().Trim();
 
         ClearBoardNextWord();
@@ -123,8 +117,9 @@ public class Board : MonoBehaviour
 
     private void LoadData()
     {
+        Debug.Log(textJSON.name);
         synonymResponse = JsonUtility.FromJson<SynonymResponse.Root>(textJSON.text);
-        Debug.Log(synonymResponse.words);
+        Debug.Log(synonymResponse.words[0].word);
 
         // OLD CODE
         //TextAsset textFile = Resources.Load("solution_words.txt") as TextAsset;
@@ -136,23 +131,25 @@ public class Board : MonoBehaviour
         List<string> tempWordList = new List<string>();
         synonymList = new List<string>();
 
-        primaryWord = synonymResponse.words[0].word;
+        int randomIndex = Random.Range(0, synonymResponse.words.Count);
+        Debug.Log($"randomIndex = {randomIndex}");
+        Debug.Log($"list count = {synonymResponse.words.Count}");
+        primaryWord = synonymResponse.words[randomIndex].word;
         primaryWordUI.text = primaryWord;
         
-        for (int i = 0; i < synonymResponse.words.Count; i++)
+        for (int i = 0; i < synonymResponse.words[randomIndex].synonyms.Count; i++)
         {
-            synonymList.Add(synonymResponse.words[i].synonyms[i].ToLower().Trim());
+            synonymList.Add(synonymResponse.words[randomIndex].synonyms[i].ToLower().Trim());
         }
-        
 
         string tempWord = synonymList[Random.Range(0, synonymList.Count)];
 
         if(wordToBeGuessed != string.Empty)
         {
-            while(wordToBeGuessed == tempWord)
+            while(tempWord == wordToBeGuessed)
             {
                 tempWord = synonymList[Random.Range(0, synonymList.Count)];
-                tempWord = tempWord.ToLower().Trim();
+                tempWord.ToLower().Trim();
             }
         }
 
