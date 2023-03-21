@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class Board : MonoBehaviour
 {
-        private static readonly KeyCode[] ALL_KEYS = new KeyCode[] {
+    private static readonly KeyCode[] ALL_KEYS = new KeyCode[] {
         KeyCode.A, KeyCode.B, KeyCode.C, KeyCode.D, KeyCode.E, KeyCode.F, KeyCode.G, KeyCode.H,
         KeyCode.I, KeyCode.J, KeyCode.K, KeyCode.L, KeyCode.M, KeyCode.N, KeyCode.O, KeyCode.P,
         KeyCode.Q, KeyCode.R, KeyCode.S, KeyCode.T, KeyCode.U, KeyCode.V, KeyCode.W, KeyCode.Y,
@@ -25,14 +25,17 @@ public class Board : MonoBehaviour
     GameObject primaryWordGameObject;
     // Managing contact to the GuessedWordList script.
     GuessedWordList guessedWordList;
-    [SerializeField]GameObject guessedWordListGameObject;
+    [SerializeField] GameObject guessedWordListGameObject;
+
+    DifficultySelector difficultySelector;
+    [SerializeField] GameObject difficultiesGameObject;
 
     // JSON file gets added in UI.
     public TextAsset textJSON;
 
     [SerializeField]
     [DisplayName("Word to be guessed")]
-    private string wordToBeGuessed { get; set; }  
+    private string wordToBeGuessed { get; set; }
     private string primaryWord;
 
     private string[] solutionWords;
@@ -41,13 +44,10 @@ public class Board : MonoBehaviour
 
     [SerializeField]
     public List<string> synonymList;
- 
+
     [SerializeField]
-    private int rowAmountLongWord;
-    [SerializeField]
-    private int rowAmountMediumWord;
-    [SerializeField]
-    private int rowAmountShortWord;
+    private int rowAmount;
+
     public List<string> correctWords = new List<string>();
 
     //public GuessedWordList guessedWordLists;
@@ -69,10 +69,27 @@ public class Board : MonoBehaviour
     public Button nextWordButton;
     public Button newGameButton;
 
-    private void Awake() 
+    private string chosendifficulty;
+
+    private void Awake()
     {
+        DifficultySelector.OnDifficultyChanged += DifficultySelectorOnDifficultyChanged;
+
         guessedWordList = guessedWordListGameObject.GetComponent<GuessedWordList>();
         primaryWordUI = primaryWordGameObject.GetComponent<TextMeshProUGUI>();
+        difficultySelector = difficultiesGameObject.GetComponent<DifficultySelector>();
+    }
+
+    private void OnDestroy()
+    {
+        DifficultySelector.OnDifficultyChanged -= DifficultySelectorOnDifficultyChanged;
+        Debug.Log("UNSUBBED");
+    }
+
+    private void DifficultySelectorOnDifficultyChanged(string difficulty)
+    {
+        chosendifficulty = difficulty;
+        NewGame();
     }
 
     void Start()
@@ -91,62 +108,67 @@ public class Board : MonoBehaviour
     {
         tryAgainButton.interactable = true;
 
-        if(synonymList.Count > 0)
+        if (synonymList.Count > 0)
         {
-        string tempWord = synonymList[Random.Range(0, synonymList.Count)];
+            string tempWord = synonymList[Random.Range(0, synonymList.Count)];
 
-        wordToBeGuessed = tempWord.ToLower().Trim();
+            wordToBeGuessed = tempWord.ToLower().Trim();
 
-        ClearBoardNextWord();
-        enabled = true;
+            ClearBoardNextWord();
+            enabled = true;
         }
-        else{
+        else
+        {
             Debug.Log("You guessed all the synonyms!");
         }
     }
 
     public void NewGame()
     {
+        Debug.Log("The difficulty is: " + chosendifficulty);
         nextWordButton.interactable = true;
         tryAgainButton.interactable = true;
 
-        SetRandomWord();
+        SetRandomWord(chosendifficulty);
         ClearBoardNewGame();
         enabled = true;
     }
 
     private void LoadData()
     {
-        Debug.Log(textJSON.name);
         synonymResponse = JsonUtility.FromJson<SynonymResponse.Root>(textJSON.text);
-        Debug.Log(synonymResponse.words[0].word);
 
         // OLD CODE
         //TextAsset textFile = Resources.Load("solution_words.txt") as TextAsset;
         //solutionWords = textFile.text.Split("\n");
     }
 
-    private void SetRandomWord()
+    private void SetRandomWord(string difficulty)
     {
         List<string> tempWordList = new List<string>();
-        synonymList = new List<string>();
 
         int randomIndex = Random.Range(0, synonymResponse.words.Count);
-        Debug.Log($"randomIndex = {randomIndex}");
-        Debug.Log($"list count = {synonymResponse.words.Count}");
+
+        while (PopulateSynonymsFromDifficulty(difficulty, randomIndex).Count == 0)
+        {
+            randomIndex = Random.Range(0, synonymResponse.words.Count);
+            //PopulateSynonymsFromDifficulty(difficulty, randomIndex);
+        }
+
         primaryWord = synonymResponse.words[randomIndex].word;
         primaryWordUI.text = primaryWord;
-        
-        for (int i = 0; i < synonymResponse.words[randomIndex].synonyms.Count; i++)
+
+        /*for (int i = 0; i < synonymResponse.words[randomIndex].synonyms.Count; i++)
         {
             synonymList.Add(synonymResponse.words[randomIndex].synonyms[i].ToLower().Trim());
         }
+        */
 
         string tempWord = synonymList[Random.Range(0, synonymList.Count)];
 
-        if(wordToBeGuessed != string.Empty)
+        if (wordToBeGuessed != string.Empty)
         {
-            while(tempWord == wordToBeGuessed)
+            while (tempWord == wordToBeGuessed)
             {
                 tempWord = synonymList[Random.Range(0, synonymList.Count)];
                 tempWord.ToLower().Trim();
@@ -154,6 +176,41 @@ public class Board : MonoBehaviour
         }
 
         wordToBeGuessed = tempWord.ToLower().Trim();
+    }
+
+    private List<string> PopulateSynonymsFromDifficulty(string difficulty, int randomIndex)
+    {
+        synonymList = new List<string>();
+
+            if (difficulty == "EASY")
+            {
+                for (int i = 0; i < synonymResponse.words[randomIndex].synonyms.Count; i++)
+                {
+                    if (synonymResponse.words[randomIndex].synonyms[i].Length <= 6)
+                    {
+                        synonymList.Add(synonymResponse.words[randomIndex].synonyms[i].ToLower().Trim());
+                    }
+                }
+            }
+            else if (difficulty == "MEDIUM")
+            {
+                for (int i = 0; i < synonymResponse.words[randomIndex].synonyms.Count; i++)
+                {
+                    if (synonymResponse.words[randomIndex].synonyms[i].Length <= 10)
+                    {
+                        synonymList.Add(synonymResponse.words[randomIndex].synonyms[i].ToLower().Trim());
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < synonymResponse.words[randomIndex].synonyms.Count; i++)
+                {
+                    synonymList.Add(synonymResponse.words[randomIndex].synonyms[i].ToLower().Trim());
+                }
+            }
+
+        return synonymList;
     }
 
     private void SetTileAmount()
@@ -168,7 +225,7 @@ public class Board : MonoBehaviour
     void Update()
     {
         /*
-        THIS IS USED FOR FINDING THE CORRESPONDING KEYS FROM AN AZERTY LAYOUT TO QWERTY
+        //THIS IS USED FOR FINDING THE CORRESPONDING KEYS FROM AN AZERTY LAYOUT TO QWERTY
          foreach (KeyCode keycode in KeyCode.GetValues (typeof (KeyCode)))
          {
              if (Input.GetKeyDown (keycode))
@@ -180,31 +237,32 @@ public class Board : MonoBehaviour
 
         Row currentRow = rows[rowIndex];
 
-        if(Input.GetKeyDown(KeyCode.Backspace))
+        if (Input.GetKeyDown(KeyCode.Backspace))
         {
-            if(columnIndex > 0)
+            if (columnIndex > 0)
             {
                 columnIndex--;
                 currentRow.tiles[columnIndex].SetLetter('\0');
                 currentRow.tiles[columnIndex].SetState(emptyState);
             }
         }
-        else if(Input.GetKeyDown(KeyCode.Return))
+        else if (Input.GetKeyDown(KeyCode.Return))
         {
-            if(columnIndex == currentRow.tiles.Count)
+            if (columnIndex == currentRow.tiles.Count)
             {
                 OnSubmitRow(currentRow);
             }
-            else{
+            else
+            {
                 Debug.Log("You can't submit before the whole row is filled");
             }
         }
 
         for (int i = 0; i < ALL_KEYS.Length; i++)
         {
-            if(Input.GetKeyDown(ALL_KEYS[i]))
+            if (Input.GetKeyDown(ALL_KEYS[i]))
             {
-                if(columnIndex < currentRow.tiles.Count)
+                if (columnIndex < currentRow.tiles.Count)
                 {
                     //currentRow.tiles[columnIndex].SetLetter(ConvertToDanish(ALL_KEYS[i]));
                     currentRow.tiles[columnIndex].SetLetter(ConvertToDanish(ALL_KEYS[i]));
@@ -214,8 +272,8 @@ public class Board : MonoBehaviour
                     // Making sure, that if the player spams keys, it can't mess up the indexes
                     break;
                 }
-            }   
-        }   
+            }
+        }
     }
 
     private void ClearBoardTryAgain()
@@ -231,24 +289,6 @@ public class Board : MonoBehaviour
 
         rowIndex = 0;
         columnIndex = 0;
-
-
-        // Makes sure to delete the correct guessed word from the
-        // guessed words list, if they player did in fact guess the word,
-        // but wants to try again on the same word for some reason.
-        
-        /*if(guessedWordList.correctWords.Count != 0)
-        {
-            int lastCorrectWordIndex = guessedWordList.correctWords.Count;
-
-            CorrectWord tempCorrectWord = guessedWordList.correctWords[lastCorrectWordIndex-1];
-
-            if(guessedWordList.correctWords.Contains(tempCorrectWord))
-            {
-                //guessedWordList.correctWords.Remove(tempCorrectWord);
-                Destroy(tempCorrectWord.gameObject);
-            }
-        }*/
     }
 
     private void ClearBoardNextWord()
@@ -306,17 +346,17 @@ public class Board : MonoBehaviour
 
     private char ConvertToDanish(KeyCode keyCode)
     {
-        if(keyCode == KeyCode.Quote)
+        if (keyCode == KeyCode.Quote)
         {
             char temp = 'ø';
             return temp;
         }
-        else if(keyCode == KeyCode.BackQuote)
+        else if (keyCode == KeyCode.BackQuote)
         {
             char temp = 'æ';
             return temp;
         }
-        else if(keyCode == KeyCode.RightBracket)
+        else if (keyCode == KeyCode.RightBracket)
         {
             char temp = 'å';
             return temp;
@@ -335,15 +375,15 @@ public class Board : MonoBehaviour
         {
             Tile tile = submitRow.tiles[i];
 
-            if(tile.letter == wordToBeGuessed[i])
+            if (tile.letter == wordToBeGuessed[i])
             {
                 tile.SetState(correctState);
                 remaining = remaining.Remove(i, 1);
                 remaining = remaining.Insert(i, " ");
             }
-            else if(!wordToBeGuessed.Contains(tile.letter))
+            else if (!wordToBeGuessed.Contains(tile.letter))
             {
-                tile.SetState(incorrectState); 
+                tile.SetState(incorrectState);
             }
         }
 
@@ -351,9 +391,9 @@ public class Board : MonoBehaviour
         {
             Tile tile = submitRow.tiles[i];
 
-            if(tile.state != correctState && tile.state != incorrectState)
+            if (tile.state != correctState && tile.state != incorrectState)
             {
-                if(remaining.Contains(tile.letter))
+                if (remaining.Contains(tile.letter))
                 {
                     tile.SetState(wrongPositionState);
 
@@ -363,7 +403,7 @@ public class Board : MonoBehaviour
                 }
                 else
                 {
-                    tile.SetState(incorrectState); 
+                    tile.SetState(incorrectState);
                 }
             }
         }
@@ -372,20 +412,21 @@ public class Board : MonoBehaviour
         columnIndex = 0;
 
         // Check if the player reached the last row without guessing the word. Disables the script.
-        if(rowIndex >= rows.Count){
+        if (rowIndex >= rows.Count)
+        {
             enabled = false;
         }
 
         // Check if the row submitted is the wordTobeGuessed
-        if(HasWon(submitRow))
+        if (HasWon(submitRow))
         {
 
-            if(synonymList.Contains(wordToBeGuessed))
+            if (synonymList.Contains(wordToBeGuessed))
             {
                 synonymList.Remove(wordToBeGuessed.ToLower().Trim());
             }
 
-            if(LastSynonym())
+            if (LastSynonym())
             {
                 nextWordButton.interactable = false;
             }
@@ -393,7 +434,7 @@ public class Board : MonoBehaviour
             tryAgainButton.interactable = false;
             SetGuessedWord(wordToBeGuessed);
             enabled = false;
-             Debug.Log("YOU WIN");
+            Debug.Log("YOU WIN");
         }
     }
 
@@ -404,7 +445,7 @@ public class Board : MonoBehaviour
 
     public bool LastSynonym()
     {
-        if(synonymList.Count == 0)
+        if (synonymList.Count == 0)
         {
             return true;
         }
@@ -416,51 +457,34 @@ public class Board : MonoBehaviour
     {
         for (int i = 0; i < row.tiles.Count; i++)
         {
-            if(row.tiles[i].state != correctState)
+            if (row.tiles[i].state != correctState)
             {
                 return false;
-            }   
+            }
         }
-        
+
         return true;
     }
 
     public void SetRowAmount()
     {
-        int wordLength = 0;
-
-        if(wordToBeGuessed.Length < rowAmountShortWord)
+        for (int i = 0; i < rowAmount; i++)
         {
-            wordLength = rowAmountShortWord;
-        }
-        else if(wordToBeGuessed.Length < rowAmountMediumWord)
-        {
-            wordLength = rowAmountMediumWord;
-        }
-        else{
-            wordLength = rowAmountLongWord;
-        }
-
-        for (int i = 0; i < wordLength; i++)
-        {
-            Row row = Instantiate(this.rowPrefab, new Vector3(0,0,0), Quaternion.identity).GetComponent<Row>();
+            Row row = Instantiate(this.rowPrefab, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<Row>();
             row.transform.SetParent(this.transform, false);
 
             rows.Add(row);
         }
-        
-        Debug.Log(wordLength);
-        Debug.Log(rows.Count);
     }
 
-    private void OnEnable() 
+    private void OnEnable()
     {
         tryAgainButton.gameObject.SetActive(false);
         nextWordButton.gameObject.SetActive(false);
         newGameButton.gameObject.SetActive(false);
     }
 
-    private void OnDisable() 
+    private void OnDisable()
     {
         tryAgainButton.gameObject.SetActive(true);
         nextWordButton.gameObject.SetActive(true);
