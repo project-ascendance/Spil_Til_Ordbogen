@@ -43,7 +43,7 @@ public class Board : MonoBehaviour
     public SynonymResponse.Root synonymResponse;
 
     [SerializeField]
-    public List<string> synonymList;
+    public List<string> synonymList = new List<string>();
 
     [SerializeField]
     private int rowAmount;
@@ -149,10 +149,12 @@ public class Board : MonoBehaviour
 
         int randomIndex = Random.Range(0, synonymResponse.words.Count);
 
-        while (PopulateSynonymsFromDifficulty(difficulty, randomIndex).Count == 0)
+        synonymList.Clear();
+
+        while (synonymList == null || synonymList.Count == 0)
         {
             randomIndex = Random.Range(0, synonymResponse.words.Count);
-            //PopulateSynonymsFromDifficulty(difficulty, randomIndex);
+            PopulateSynonymsFromDifficulty(difficulty, randomIndex);
         }
 
         primaryWord = synonymResponse.words[randomIndex].word;
@@ -178,10 +180,8 @@ public class Board : MonoBehaviour
         wordToBeGuessed = tempWord.ToLower().Trim();
     }
 
-    private List<string> PopulateSynonymsFromDifficulty(string difficulty, int randomIndex)
+    private void PopulateSynonymsFromDifficulty(string difficulty, int randomIndex)
     {
-        synonymList = new List<string>();
-
             if (difficulty == "EASY")
             {
                 for (int i = 0; i < synonymResponse.words[randomIndex].synonyms.Count; i++)
@@ -209,8 +209,6 @@ public class Board : MonoBehaviour
                     synonymList.Add(synonymResponse.words[randomIndex].synonyms[i].ToLower().Trim());
                 }
             }
-
-        return synonymList;
     }
 
     private void SetTileAmount()

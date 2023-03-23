@@ -31,8 +31,8 @@ public class DifficultySelector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UpdateDifficulty(medium);
         mediumButton.interactable = false;
+        UpdateDifficulty(medium);
     }
 
     public void SetDifficultyEasy()
