@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &34252246
 Transform:
   m_ObjectHideFlags: 0
@@ -508,12 +508,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
+  m_fontSize: 20
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 22
+  m_fontSizeMax: 20
   m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -647,7 +647,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 816.8281, y: 26.781235}
-  m_SizeDelta: {x: 120, y: 50}
+  m_SizeDelta: {x: 100, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &427891259
 MonoBehaviour:
@@ -670,11 +670,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.74509805, g: 0.023529412, b: 0.023529412, a: 1}
-    m_HighlightedColor: {r: 0.5849056, g: 0.0082769515, b: 0.0082769515, a: 1}
-    m_PressedColor: {r: 0.3962264, g: 0, b: 0, a: 1}
-    m_SelectedColor: {r: 0.74509805, g: 0.023529414, b: 0.023529414, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.11372549, g: 0.8352941, b: 0.72156864, a: 1}
+    m_HighlightedColor: {r: 0, g: 0.6431373, b: 0.5372549, a: 1}
+    m_PressedColor: {r: 0, g: 0.5764706, b: 0.48235294, a: 1}
+    m_SelectedColor: {r: 0.105882354, g: 0.74509805, b: 0.6392157, a: 1}
+    m_DisabledColor: {r: 0.54901963, g: 0.654902, b: 0.63529414, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -989,7 +989,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 816.8281, y: 53.562485}
-  m_SizeDelta: {x: 120, y: 50}
+  m_SizeDelta: {x: 100, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &644723601
 MonoBehaviour:
@@ -1012,11 +1012,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.92941177, g: 0.8745098, b: 0.19607843, a: 1}
-    m_HighlightedColor: {r: 0.7264151, g: 0.684601, b: 0.16789784, a: 1}
-    m_PressedColor: {r: 0.5849056, g: 0.55323553, b: 0.13519046, a: 1}
-    m_SelectedColor: {r: 0.9294118, g: 0.8745099, b: 0.19607845, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.11372549, g: 0.8352941, b: 0.72156864, a: 1}
+    m_HighlightedColor: {r: 0, g: 0.6431373, b: 0.5372549, a: 1}
+    m_PressedColor: {r: 0, g: 0.5764706, b: 0.48235294, a: 1}
+    m_SelectedColor: {r: 0.105882354, g: 0.74509805, b: 0.6392157, a: 1}
+    m_DisabledColor: {r: 0.54901963, g: 0.654902, b: 0.63529414, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1139,7 +1139,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 816.8281, y: 80.34375}
-  m_SizeDelta: {x: 120, y: 50}
+  m_SizeDelta: {x: 100, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &752875330
 MonoBehaviour:
@@ -1162,10 +1162,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.28235295, g: 0.74509805, b: 0, a: 1}
-    m_HighlightedColor: {r: 0.26383576, g: 0.6509434, b: 0.027634379, a: 1}
-    m_PressedColor: {r: 0.19602728, g: 0.4811321, b: 0.024964403, a: 1}
-    m_SelectedColor: {r: 0.28235295, g: 0.74509805, b: 0, a: 1}
+    m_NormalColor: {r: 0.1137255, g: 0.8352942, b: 0.72156864, a: 1}
+    m_HighlightedColor: {r: 0, g: 0.6431373, b: 0.5372549, a: 1}
+    m_PressedColor: {r: 0, g: 0.5764706, b: 0.48235294, a: 1}
+    m_SelectedColor: {r: 0.105882354, g: 0.74509805, b: 0.6392157, a: 1}
     m_DisabledColor: {r: 0.54901963, g: 0.654902, b: 0.63529414, a: 0.09803922}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2364,12 +2364,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
+  m_fontSize: 20
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 22
+  m_fontSizeMax: 20
   m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -2611,12 +2611,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
+  m_fontSize: 20
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 22
+  m_fontSizeMax: 20
   m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
