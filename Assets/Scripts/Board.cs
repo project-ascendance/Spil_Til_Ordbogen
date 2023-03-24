@@ -13,7 +13,7 @@ public class Board : MonoBehaviour
         KeyCode.A, KeyCode.B, KeyCode.C, KeyCode.D, KeyCode.E, KeyCode.F, KeyCode.G, KeyCode.H,
         KeyCode.I, KeyCode.J, KeyCode.K, KeyCode.L, KeyCode.M, KeyCode.N, KeyCode.O, KeyCode.P,
         KeyCode.Q, KeyCode.R, KeyCode.S, KeyCode.T, KeyCode.U, KeyCode.V, KeyCode.W, KeyCode.Y,
-        KeyCode.Z, KeyCode.Y, KeyCode.Z, KeyCode.Quote, KeyCode.RightBracket, KeyCode.BackQuote
+        KeyCode.X, KeyCode.Z, KeyCode.Y, KeyCode.Z, KeyCode.Quote, KeyCode.RightBracket, KeyCode.BackQuote
 
         // Quote corresponds to Æ. Semicolon corresponds to Ø & LeftBacket corresponds to Å
     };
